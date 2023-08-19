@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EjemploController;
-
+use App\Http\Controllers\EstudianteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +19,7 @@ Route::get('/', function () {
     return "hola como estas";
 });
 
+Route::resource('estudiantes',EstudianteController::class);
 /*
 Route::get('/usuarios', function(){
 return"Hol esta es la ruta de los usuarios";
@@ -39,7 +40,7 @@ Route::get('/usuarios/[{IdUsuario}/{Nombre?}',function($idusuario,$nombre=null){
 
 });*/
 
-
+//Rutas para acceso
 Route::get('/usuarios',[EjemploController::class,'index']);
 Route::get('/usuarios/create',[EjemploController::class,'create']);
 Route::get('/usuarios/{idusuario},/{Nombre?}',[EjemploController::class,'otro']);
