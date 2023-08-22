@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Muestra de Show o Otro</h1>
+    <h1>Muestra de Show o Otro.</h1>
     @if($nombreusuario)
     <h2>Hola usuario este es tu id: {{$Idusuario}} y Nombre {{$nombreusuario}}</h2>
     @else
